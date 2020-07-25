@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+       <style>
+          body {
+                  background: url('../static/3.jpg') no-repeat center center fixed;
+                  -webkit-background-size: cover;
+                  -moz-background-size: cover;
+                  -o-background-size: cover;
+                  background-size: cover;
+                  z-index:-500;
+                }
+
+
+       </style>
+    <meta charset="UTF-8">
+    <title>Logistic Regression</title>
+</head>
+<body>
+<h1 style="text-align:center;">Logistic Regression</h1>
+
+    <h3>Note: Please choose the date in between 10-06-2019 to 11-07-2019. the analyzer might take a while to forecast the fare. In the mean time if you want to refer the source code/docs click on the Github button. </h3>
+
+    <form action="https://github.com/bantu07/AirFare-Prediction" target="_blank">
+        <i class="material-icons" style="font-size:23.5px;color:black;">computer</i>
+        <i class="material-icons" style="font-size:23.5px;color:black">developer_mode</i>
+        <input type="submit" value="Source code on Github" />
+
+    </form>
+<hr>
+<div class="center" style="text-align:center;">
+<form method="POST" action="/predict">
+        Pregnancies:<input type="text" id="preg" name="preg" value="">
+        Glucose:<input type="text" id="gluc" name="gluc" value="">
+        Blood Pressure:<input type="text" id="BP" name="BP" value="">
+        Skin Thickness:<input type="text" id="skin" name="skin" value="">
+        Insulin:<input type="text" id="insulin" name="insulin" value="">
+        BMI:<input type="text" id="bmi" name="bmi" value="">
+        DiabetesPedigreeFunction:<input type="text" id="DPF" name="DPF" value="">
+        Age:<input type="text" id="age" name="age" value="">
+    <br>
+        <input type="submit" value="Predict">
+
+</form>
+</div>
+</body>
+</html>
