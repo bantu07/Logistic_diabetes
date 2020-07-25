@@ -1,0 +1,16 @@
+form{
+    margin: 20px auto;
+    width: 320px;
+}
+
+input{
+    padding: 40px;
+    font-size: inherit;
+}
+
+input[type='number']{
+    display: block;
+    margin-bottom: 60px;
+    width: 100%;
+    border:20px solid black;
+}
