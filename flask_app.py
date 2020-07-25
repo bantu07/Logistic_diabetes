@@ -4,7 +4,7 @@ from flask import Flask, request, render_template
 from logistic_deploy import predObj
 import numpy as np
 
-app1 = Flask(__name__)
+app = Flask(__name__)
 
 
 class ClientApi:
@@ -12,12 +12,12 @@ class ClientApi:
         self.predObj = predObj()
 
 
-@app1.route("/", methods=['GET'])
+@app.route("/", methods=['GET'])
 def homepage():
     return render_template('home.html')
 
 
-@app1.route("/predict", methods=['GET', 'POST'])
+@app.route("/predict", methods=['GET', 'POST'])
 def predictRoute():
     if request.method == 'POST':
         p = request.form['preg']
@@ -39,4 +39,4 @@ def predictRoute():
 
 
 if __name__ == "__main__":
-    app1.run(debug=True)
+    app.run(debug=True)
