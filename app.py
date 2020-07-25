@@ -1,8 +1,6 @@
-import json
-
 from flask import Flask, request, render_template
+
 from logistic_deploy import predObj
-import numpy as np
 
 app = Flask(__name__)
 
@@ -33,7 +31,7 @@ def predictRoute():
         pred = predObj()
         res = pred.predict_log(my_dict)
 
-        return render_template("result.html", res=json.dumps(res))
+        return render_template("result.html", res=res)
     else:
         return render_template("home.html")
 
