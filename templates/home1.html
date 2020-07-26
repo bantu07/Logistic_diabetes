@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<head>
+       <style>
+          body {
+                  background: url('../static/3.jpg') no-repeat center center fixed;
+                  -webkit-background-size: cover;
+                  -moz-background-size: cover;
+                  -o-background-size: cover;
+                  background-size: cover;
+                  z-index:-500;
+                }
+
+       </style>
+    <meta charset="UTF-8">
+    <title>Logistic Regression</title>
+</head>
+<body style="text-align:center;">
+<link rel="stylesheet" type="text/css" href="style.css">
+<h1 style="text-align:center;">Logistic Regression</h1>
+
+<form action="https://github.com/bantu07/AirFare-Prediction" target="_blank">
+        <i class="material-icons" style="font-size:23.5px;color:black;">computer</i>
+        <i class="material-icons" style="font-size:23.5px;color:black">developer_mode</i>
+        <input type="submit" value="Source code on Github"/>
+</form>
+
+<hr>
+<div class="center" style="text-align:center;">
+<form method="POST" action="/predict" style="text-align:center;" enctype="multipart/form-data">
+    <table align="center" width="29%" height="310"  autofocus cellspacing="9">
+        <head>
+            <h3>
+                If you want to check diabetes for a patient use this:
+            </h3>
+        </head>
+        <tr>
+            <td>
+                <b>Pregnancies:</b>
+            </td>
+            <td>
+                <input type="number" step="any" id="preg" name="preg" value="" placeholder="Pregnancies" required><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>Glucose:</b>
+            </td>
+            <td>
+                <input type="number" step="any" id="gluc" name="gluc" value="" placeholder="Glucose" required><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>Blood Pressure:</b>
+            </td>
+            <td>
+                <input type="number" step="any" id="BP" name="BP" value="" placeholder="BP" required><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               <b>Skin Thickness:</b>
+            </td>
+            <td>
+                <input type="number" step="any" id="skin" name="skin" value="" placeholder="skin thickness" required><br>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <b>Insulin:</b>
+            </td>
+            <td>
+                <input type="number" step="any" id="insulin" name="insulin" value="" placeholder="insulin" required><br>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+               <b>BMI:</b>
+            </td>
+            <td>
+                <input type="number" step="any" id="bmi" name="bmi" value="" placeholder="BMI" required><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>DiabetesPedigreeFunction:</b>
+            </td>
+            <td>
+                <input type="number" step="any" id="DPF" name="DPF" value="" placeholder="DPF" required><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>Age:</b>
+            </td>
+            <td>
+                <input type="number" id="age" name="age" value="" placeholder="Age" required><br>
+            </td>
+        </tr>
+    </table>
+
+    <table align="center">
+         <tr>
+        <td><br>
+        <input align="center" type="submit" value="Predict" required><br>
+        </td>
+    </tr>
+    </table>
+</form><hr>
+
+<div class="center" style="text-align:center;">
+
+<form method="POST" action="/predict_bulk" style="text-align:center;" enctype="multipart/form-data">
+        <h3> To check prediction for the whole dataset please upload the file in .csv format</h3>
+        <label for="myfi" style="text-align:center">Select a file:</label>
+        <input type="file" id="myfi" name="myfile"><br><br>
+        <input type="submit" style="text-align:center">
+</form>
+</div>
+</body>
+</html>
